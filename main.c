@@ -27,8 +27,8 @@ int main(int argc, char *argv[])
 
 	player_t player = { 3.456f, 2.345f, 1.523f, M_PI / 3.0f, 0, 0 };
 
-	texture_t* tex_walls = load_texture("walltext.bmp", SDL_PIXELFORMAT_ABGR8888);
-	texture_t* tex_sprites = load_texture("monsters.bmp", SDL_PIXELFORMAT_ABGR8888);
+	texture_t* tex_walls = load_texture("assets/walltext.bmp", SDL_PIXELFORMAT_ABGR8888);
+	texture_t* tex_sprites = load_texture("assets/monsters.bmp", SDL_PIXELFORMAT_ABGR8888);
 
 	if (!tex_walls || !tex_sprites) {
 		puts("Failed to load textures");
