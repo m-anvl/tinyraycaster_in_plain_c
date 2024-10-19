@@ -29,15 +29,16 @@
 #endif
 
 /* Error macros */
-#define	ERR_SDL_1(str)				fprintf(stderr, "[%s:%d] %s error: %s\n",\
-										__FILE__, __LINE__, #str, SDL_GetError());
+#define	ERR_SDL_1(str)	fprintf(stderr, "[%s:%d] %s error: %s\n",\
+						__FILE__, __LINE__, #str, SDL_GetError());
 
-#define	ERR_SDL_2(str, is_fatal)		do { ERR_SDL_1(str) if(is_fatal) abort(); } while(0)
+#define	ERR_SDL_2(str, is_fatal)	do { ERR_SDL_1(str) if(is_fatal) abort(); } while(0)
 
 #define	GET_ARGS(A1, A2, A3, ...)	A3
 
-#define	CHOOSE_ERR_MACRO(...)		GET_ARGS(__VA_ARGS__, ERR_SDL_2, ERR_SDL_1)
-#define	ERR_SDL(...)				do { CHOOSE_ERR_MACRO(__VA_ARGS__)(__VA_ARGS__); } while(0)
+#define	CHOOSE_ERR_MACRO(...)	GET_ARGS(__VA_ARGS__, ERR_SDL_2, ERR_SDL_1)
+
+#define	ERR_SDL(...)	do { CHOOSE_ERR_MACRO(__VA_ARGS__)(__VA_ARGS__); } while(0)
 
 
 #endif // !COMMON_H_SENTRY
