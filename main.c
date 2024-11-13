@@ -103,20 +103,14 @@ int main(int argc, char *argv[])
 		map = NULL;
 	}
 
-	if (tex_walls) {
-		free(tex_walls);
-		tex_walls = NULL;
-	}
+	destroy_texture(tex_walls);
+	tex_walls = NULL;
 
-	if (tex_sprites) {
-		free(tex_sprites);
-		tex_sprites = NULL;
-	}
+	destroy_texture(tex_sprites);
+	tex_sprites = NULL;
 
-	if (fb) {
-		free(fb);
-		fb = NULL;
-	}
+	destroy_framebuffer(fb);
+	fb = NULL;
 
 	return 0;
 }

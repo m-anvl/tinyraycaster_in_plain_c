@@ -20,6 +20,15 @@ framebuffer_t* framebuffer_create(const size_t w, const size_t h, const uint32_t
 	return fb;
 }
 
+void destroy_framebuffer(framebuffer_t* fb)
+{
+	if (fb) {
+		free(fb->img);
+		fb->img = NULL;
+		free(fb);
+	}
+}
+
 void clear_screen(framebuffer_t* fb, const uint32_t color)
 {
 	size_t screen_size = fb->w * fb->h;

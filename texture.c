@@ -67,6 +67,15 @@ texture_t* load_texture(const char *filename, const uint32_t format)
 	return texture;
 }
 
+void destroy_texture(texture_t* texture)
+{
+	if (texture) {
+		free(texture->img);
+		texture->img = NULL;
+		free(texture);
+	}
+}
+
 uint32_t get_texel(const texture_t *texture, const size_t i, const size_t j, const size_t idx)
 {
 	assert(i < texture->size && j < texture->size && idx < texture->count);
