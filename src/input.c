@@ -8,20 +8,20 @@ SDL_Event event;
 int get_input(player_t* player)
 {
 	if (SDL_PollEvent(&event)) {
-		if (event.type == SDL_QUIT ||
-			(SDL_KEYDOWN == event.type &&
-				SDLK_ESCAPE == event.key.keysym.sym))
+		if (event.type == SDL_EVENT_QUIT ||
+			(SDL_EVENT_KEY_DOWN == event.type &&
+				SDLK_ESCAPE == event.key.key))
 			return EXIT_APP;
 
-		if (SDL_KEYUP == event.type) {
+		if (SDL_EVENT_KEY_UP == event.type) {
 
-			switch (event.key.keysym.sym) {
-			case 'a':
-			case 'd':
+			switch (event.key.key) {
+			case SDLK_A:
+			case SDLK_D:
 				player->turn = 0;
 				break;
-			case 'w':
-			case 's':
+			case SDLK_W:
+			case SDLK_S:
 				player->walk = 0;
 				break;
 			default:
@@ -29,19 +29,19 @@ int get_input(player_t* player)
 			}
 		}
 
-		if (SDL_KEYDOWN == event.type) {
+		if (SDL_EVENT_KEY_DOWN == event.type) {
 
-			switch (event.key.keysym.sym) {
-			case 'a':
+			switch (event.key.key) {
+			case SDLK_A:
 				player->turn = -1;
 				break;
-			case 'd':
+			case SDLK_D:
 				player->turn = 1;
 				break;
-			case 'w':
+			case SDLK_W:
 				player->walk = 1;
 				break;
-			case 's':
+			case SDLK_S:
 				player->walk = -1;
 				break;
 			default:
