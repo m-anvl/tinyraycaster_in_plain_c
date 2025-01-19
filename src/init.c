@@ -3,7 +3,7 @@
 
 void init_subsystems(void)
 {
-    if (SDL_Init(SDL_INIT_VIDEO) != 0) {
+    if (!SDL_Init(SDL_INIT_VIDEO)) {
         ERR_SDL(SDL_Init, true);
     }
     atexit(SDL_Quit);
