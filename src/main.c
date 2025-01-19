@@ -45,10 +45,6 @@ int main(int argc, char* argv[])
     app game;
     init_app(&game, SCREEN_WIDTH, SCREEN_HEIGHT);
 
-#if 0
-    init_app(&window, &renderer, (int)fb->w, (int)fb->h);
-#endif
-
     SDL_Texture* fb_texture = SDL_CreateTexture(game.rndr, SDL_PIXELFORMAT_ABGR8888,
         SDL_TEXTUREACCESS_STREAMING, (int)fb->w, (int)fb->h);
 
