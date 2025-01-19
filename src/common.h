@@ -21,11 +21,11 @@
 #include <string.h>
 #include <wchar.h>
 
-/* SDL2 headers */
-#include <SDL.h>
+/* SDL3 headers */
+#include <SDL3/SDL.h>
 #if 0
-#include <SDL_image.h>
-#include <SDL_ttf.h>
+#include <SDL3/SDL_image.h>
+#include <SDL3/SDL_ttf.h>
 #endif
 
 /* Error macros */

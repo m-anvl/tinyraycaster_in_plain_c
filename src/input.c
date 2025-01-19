@@ -1,4 +1,4 @@
-#include <SDL.h>
+#include <SDL3/SDL.h>
 #include "input.h"
 
 enum { EXIT_APP = 0, CONTINUE_APP = 1 };

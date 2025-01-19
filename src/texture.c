@@ -1,6 +1,6 @@
 #include <assert.h>
 #include <stdio.h>
-#include <SDL.h>
+#include <SDL3/SDL.h>
 
 #include "utils.h"
 #include "texture.h"

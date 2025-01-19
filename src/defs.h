@@ -1,7 +1,7 @@
 #ifndef DEFS_H_SENTRY
 #define DEFS_H_SENTRY
 
-#include <SDL.h>
+#include <SDL3/SDL.h>
 #include <stdint.h>
 
 #define WND_TITLE		"Shooter"
