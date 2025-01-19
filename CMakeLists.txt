@@ -16,6 +16,24 @@ set(TRG_NAME ${PROJECT_NAME})
 add_executable(
     ${TRG_NAME}
     src/main.c
+    src/common.h
+    src/defs.h
+    src/framebuffer.c
+    src/framebuffer.h
+    src/init.c
+    src/init.h
+    src/input.c
+    src/input.h
+    src/map.c
+    src/map.h
+    src/render.c
+    src/render.h
+    src/texture.c
+    src/texture.h
+    src/timer.c
+    src/timer.h
+    src/utils.c
+    src/utils.h
 )
 
 # Add SDL3
