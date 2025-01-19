@@ -36,6 +36,8 @@ add_executable(
     src/utils.h
 )
 
+add_definitions(-DASSETS_DIR=\"${CMAKE_CURRENT_SOURCE_DIR}/assets/\")
+
 # Add SDL3
 find_package(SDL3 REQUIRED)
 

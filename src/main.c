@@ -10,6 +10,10 @@
 #include "timer.h"
 #include "utils.h"
 
+/*  Paths to assets with textures
+    macro ASSETS_DIR defined in CMakeLists.txt */
+#define WALL_TEX_PATH       ASSETS_DIR "walltext.bmp"
+#define MONSTERS_TEX_PATH   ASSETS_DIR "monsters.bmp"
 
 int main(int argc, char* argv[])
 {
@@ -27,8 +31,8 @@ int main(int argc, char* argv[])
 
     player_t player = { 3.456f, 2.345f, 1.523f, M_PI / 3.0f, 0, 0 };
 
-    texture_t* tex_walls = load_texture("../assets/walltext.bmp", SDL_PIXELFORMAT_ABGR8888);
-    texture_t* tex_sprites = load_texture("../assets/monsters.bmp", SDL_PIXELFORMAT_ABGR8888);
+    texture_t* tex_walls = load_texture(WALL_TEX_PATH, SDL_PIXELFORMAT_ABGR8888);
+    texture_t* tex_sprites = load_texture(MONSTERS_TEX_PATH, SDL_PIXELFORMAT_ABGR8888);
 
     if (!tex_walls || !tex_sprites) {
         puts("Failed to load textures");
