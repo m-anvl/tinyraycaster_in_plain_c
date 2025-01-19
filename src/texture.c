@@ -16,8 +16,8 @@ texture_t* load_texture(const char *filename, const uint32_t format)
 		return NULL;
 	}
 
-	SDL_Surface* surface = SDL_ConvertSurfaceFormat(tmp, format, 0);
-	SDL_FreeSurface(tmp);
+	SDL_Surface* surface = SDL_ConvertSurface(tmp, format);
+    SDL_DestroySurface(tmp);
 
 	if (!surface) {
 		printf("Error SDL_ConvertSurfaceFormat(): %s\n", SDL_GetError());
@@ -29,13 +29,13 @@ texture_t* load_texture(const char *filename, const uint32_t format)
 
 	if (w * 4 != surface->pitch) {
 		puts("Error: the texture must be a 32 bit image");
-		SDL_FreeSurface(surface);
+		SDL_DestroySurface(surface);
 		return NULL;
 	}
 
 	if (w != h * (w / h)) {
 		puts("Error: the texture file must contain N square textures packed horizontally");
-		SDL_FreeSurface(surface);
+        SDL_DestroySurface(surface);
 		return NULL;
 	}
 
@@ -62,7 +62,7 @@ texture_t* load_texture(const char *filename, const uint32_t format)
 		}
 	}
 
-	SDL_FreeSurface(surface);
+    SDL_DestroySurface(surface);
 
 	return texture;
 }
