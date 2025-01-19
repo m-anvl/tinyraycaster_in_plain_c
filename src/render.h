@@ -10,8 +10,8 @@
 #include "map.h"
 
 void render(framebuffer_t* fb, map_t* map, player_t* player,
-	sprite_t sprites[], size_t sprites_cnt,	texture_t* tex_walls,
-	texture_t* tex_sprite, const uint32_t color_clear, const uint32_t color_cone);
+    sprite_t sprites[], size_t sprites_cnt, texture_t* tex_walls,
+    texture_t* tex_sprite, const uint32_t color_clear, const uint32_t color_cone);
 
 int sprites_cmp(const sprite_t* a, const sprite_t* b);
 

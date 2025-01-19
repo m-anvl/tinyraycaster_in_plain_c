@@ -3,7 +3,6 @@
 
 #include "defs.h"
 
-int get_input(player_t *player);
+int get_input(player_t* player);
 
 #endif // !INPUT_H_SENTRY
-
