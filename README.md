@@ -1,4 +1,4 @@
-# tinyraycaster in plain C
+# tinyraycaster in plain C | ([Readme RU](README_ru.md))
 
 This raycaster implementation is based on Dmitry V. Sokolov's (aka “ssloy") tutorial “Project based learning: build your own 3D shooter in a weekend" (original [repository](https://github.com/ssloy/tinyraycaster)).
 
@@ -11,6 +11,8 @@ Differences from the original:
 * For the convenience of processing and displaying the text of SDL3 errors, functional macros have been added with the ability to set a flag to terminate the application. For more information, see [lecture](https://rutube.ru/video/437ec1cc186ac3222b32dd4730a9ec61/?t=395&r=plwd) “The practice of the C language (MIPT, 2023-2024). SDL addition and visualization” by Konstantin Vladimirov.
 
 * Other differences related to the lack of separate C\+\+ features in C.
+
+![Screenshot](screenshot.png)
 
 ## Build project
 
