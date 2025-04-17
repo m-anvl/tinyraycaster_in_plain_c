@@ -19,7 +19,7 @@ Differences from the original:
 NOTE: before building, you need to install SDL3.
 
 ```sh
-git clone https://github.com/AnatoliiM18/tinyraycaster_in_plain_c.git
+git clone https://github.com/m-anvl/tinyraycaster_in_plain_c.git
 cd tinyraycaster_in_plain_c
 mkdir build
 cd build
